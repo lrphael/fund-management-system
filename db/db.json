@@ -1,0 +1,139 @@
+{
+  "funds": [
+    {
+      "id": 1,
+      "title": "BlueChip Equity Fund",
+      "minimumValue": 10000,
+      "maximumValue": 50000,
+      "investedValue": 25000,
+      "currentBalance": 22000,
+      "withdrawalDate": "2024-06-30"
+    },
+    {
+      "id": 2,
+      "title": "GreenEnergy Renewable Fund",
+      "minimumValue": 5000,
+      "maximumValue": 25000,
+      "investedValue": 15000,
+      "currentBalance": 12000,
+      "withdrawalDate": "2024-07-15"
+    },
+    {
+      "id": 3,
+      "title": "TechGrowth Technology Fund",
+      "minimumValue": 20000,
+      "maximumValue": 100000,
+      "investedValue": 50000,
+      "currentBalance": 40000,
+      "withdrawalDate": "2024-08-20"
+    },
+    {
+      "id": 4,
+      "title": "RealEstate Investment Fund",
+      "minimumValue": 50000,
+      "maximumValue": 200000,
+      "investedValue": 100000,
+      "currentBalance": 90000,
+      "withdrawalDate": "2024-07-31"
+    },
+    {
+      "id": 5,
+      "title": "HealthCare Biotech Fund",
+      "minimumValue": 10000,
+      "maximumValue": 50000,
+      "investedValue": 30000,
+      "currentBalance": 28000,
+      "withdrawalDate": "2024-08-15"
+    },
+    {
+      "id": 6,
+      "title": "Dividend Income Fund",
+      "minimumValue": 10000,
+      "maximumValue": 50000,
+      "investedValue": 20000,
+      "currentBalance": 18000,
+      "withdrawalDate": "2024-09-30"
+    },
+    {
+      "id": 7,
+      "title": "Global Bond Fund",
+      "minimumValue": 5000,
+      "maximumValue": 25000,
+      "investedValue": 15000,
+      "currentBalance": 14000,
+      "withdrawalDate": "2024-10-15"
+    },
+    {
+      "id": 8,
+      "title": "Precious Metals Fund",
+      "minimumValue": 20000,
+      "maximumValue": 100000,
+      "investedValue": 50000,
+      "currentBalance": 48000,
+      "withdrawalDate": "2024-09-20"
+    },
+    {
+      "id": 9,
+      "title": "Global Emerging Markets Fund",
+      "minimumValue": 50000,
+      "maximumValue": 200000,
+      "investedValue": 100000,
+      "currentBalance": 90000,
+      "withdrawalDate": "2024-09-30"
+    },
+    {
+      "id": 10,
+      "title": "Infrastructure Development Fund",
+      "minimumValue": 10000,
+      "maximumValue": 50000,
+      "investedValue": 30000,
+      "currentBalance": 28000,
+      "withdrawalDate": "2024-10-15"
+    },
+    {
+      "id": 11,
+      "title": "Sustainable Agriculture Fund",
+      "minimumValue": 10000,
+      "maximumValue": 50000,
+      "investedValue": 20000,
+      "currentBalance": 18000,
+      "withdrawalDate": "2024-11-30"
+    },
+    {
+      "id": 12,
+      "title": "Infrastructure REIT Fund",
+      "minimumValue": 5000,
+      "maximumValue": 25000,
+      "investedValue": 15000,
+      "currentBalance": 14000,
+      "withdrawalDate": "2024-12-15"
+    },
+    {
+      "id": 13,
+      "title": "Technology Innovation Fund",
+      "minimumValue": 20000,
+      "maximumValue": 100000,
+      "investedValue": 50000,
+      "currentBalance": 48000,
+      "withdrawalDate": "2024-11-20"
+    },
+    {
+      "id": 14,
+      "title": "Global HealthCare Fund",
+      "minimumValue": 50000,
+      "maximumValue": 200000,
+      "investedValue": 100000,
+      "currentBalance": 90000,
+      "withdrawalDate": "2024-11-30"
+    },
+    {
+      "id": 15,
+      "title": "Clean Energy Fund",
+      "minimumValue": 10000,
+      "maximumValue": 50000,
+      "investedValue": 30000,
+      "currentBalance": 28000,
+      "withdrawalDate": "2024-12-15"
+    }
+  ]
+}
