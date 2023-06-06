@@ -1,0 +1,24 @@
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title" />
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Interest</th>
+      <th>Minimum Value</th>
+      <th>Maximum Value</th>
+      <th>Mandatory Period (Months)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let fund of searchFunds()">
+      <td>{{ fund.title }}</td>
+      <td>{{ fund.interest }}</td>
+      <td>{{ fund.minimumValue }}</td>
+      <td>{{ fund.maximumValue }}</td>
+      <td>{{ fund.mandatoryPeriodMonths }}</td>
+    </tr>
+  </tbody>
+</table>
