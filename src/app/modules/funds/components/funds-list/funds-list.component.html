@@ -10,6 +10,7 @@
       <th>Minimum Value</th>
       <th>Maximum Value</th>
       <th>Mandatory Period (Months)</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,11 @@
       <td>{{ fund.minimumValue }}</td>
       <td>{{ fund.maximumValue }}</td>
       <td>{{ fund.mandatoryPeriodMonths }}</td>
+      <td>
+        <button mat-icon-button color="primary" (click)="openFundDetailsModal(fund)">
+          <mat-icon>info</mat-icon>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

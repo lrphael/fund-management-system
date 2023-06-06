@@ -5,4 +5,5 @@ export interface Fund {
   minimumValue: number;
   maximumValue: number;
   mandatoryPeriodMonths: number;
+  description: string;
 }

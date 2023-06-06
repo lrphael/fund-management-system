@@ -3,137 +3,169 @@
     {
       "id": 1,
       "title": "BlueChip Equity Fund",
+      "interest": 10,
       "minimumValue": 10000,
       "maximumValue": 50000,
-      "investedValue": 25000,
-      "currentBalance": 22000,
-      "withdrawalDate": "2024-06-30"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nisl id lacus commodo vulputate. Nulla non tincidunt urna, vitae dignissim elit. Fusce efficitur ex at sapien pharetra, a consectetur odio ultrices. Maecenas dignissim felis vel tincidunt elementum. Curabitur sed mi vitae nunc pharetra fermentum. Nunc varius, elit a euismod suscipit, nisl ligula tristique turpis, a ullamcorper tortor ex eu lacus. Sed sed rutrum tellus. Sed ac felis ultrices, ultricies ipsum et, hendrerit mi. Cras malesuada nunc in urna efficitur, in sollicitudin metus viverra."
     },
     {
       "id": 2,
       "title": "GreenEnergy Renewable Fund",
+      "interest": 8,
       "minimumValue": 5000,
       "maximumValue": 25000,
-      "investedValue": 15000,
-      "currentBalance": 12000,
-      "withdrawalDate": "2024-07-15"
+      "mandatoryPeriodMonths": 6,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet consectetur neque. Nullam ultricies tellus sed arcu rhoncus, et convallis risus maximus. Nulla gravida, urna eget egestas feugiat, tellus massa tempor lorem, sed dapibus ipsum dolor id ex. Nunc commodo interdum augue. Nullam malesuada lorem eu tortor sagittis, sed auctor arcu tincidunt. Vestibulum eget est risus. Curabitur id dignissim ligula, sit amet gravida arcu. Nulla tempor ultricies augue, id posuere justo. Phasellus egestas, tellus quis finibus pellentesque, sem ex vulputate mi, at scelerisque lacus mi in metus."
     },
     {
       "id": 3,
       "title": "TechGrowth Technology Fund",
+      "interest": 12,
       "minimumValue": 20000,
       "maximumValue": 100000,
-      "investedValue": 50000,
-      "currentBalance": 40000,
-      "withdrawalDate": "2024-08-20"
+      "mandatoryPeriodMonths": 24,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies lacus non nisi scelerisque, sed laoreet nisl interdum. Suspendisse potenti. Fusce bibendum euismod mi, sit amet suscipit nisi pharetra nec. Donec tincidunt consectetur tortor, nec malesuada velit faucibus non. Aliquam hendrerit elit a tortor vehicula, id varius elit vestibulum. Nulla efficitur pellentesque sagittis. Integer in urna luctus, gravida neque ac, interdum mi. Nulla facilisi. Praesent finibus tincidunt volutpat. Quisque feugiat quam vel dui interdum, at convallis elit hendrerit. In eget augue a odio placerat dictum non at lacus."
     },
     {
       "id": 4,
       "title": "RealEstate Investment Fund",
+      "interest": 9,
       "minimumValue": 50000,
       "maximumValue": 200000,
-      "investedValue": 100000,
-      "currentBalance": 90000,
-      "withdrawalDate": "2024-07-31"
+      "mandatoryPeriodMonths": 18,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere ligula non ligula tincidunt, sit amet fermentum velit condimentum. Suspendisse potenti. Proin non commodo nisi. Integer placerat, orci ac faucibus cursus, sem ex lobortis lectus, eu accumsan urna mauris ac neque. Nullam malesuada fringilla metus, sed placerat lorem congue et. Duis vel nisi consequat, tincidunt quam id, finibus nisl. Vestibulum sollicitudin velit a sapien lobortis vestibulum. Sed nec tortor nec nunc tincidunt dignissim. Sed egestas vestibulum mauris vitae fringilla. Praesent id mi in lacus condimentum pretium. Integer aliquet elit vitae sem pulvinar, ut varius felis commodo. Fusce condimentum ultricies ligula ut ullamcorper. Nam mollis, neque sed facilisis vulputate, orci turpis gravida orci, sit amet pellentesque lacus tellus ac mauris. Donec vel aliquam mauris, id feugiat nunc. Praesent maximus dapibus felis, in maximus est laoreet nec."
     },
     {
       "id": 5,
       "title": "HealthCare Biotech Fund",
+      "interest": 11,
       "minimumValue": 10000,
       "maximumValue": 50000,
-      "investedValue": 30000,
-      "currentBalance": 28000,
-      "withdrawalDate": "2024-08-15"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum congue mauris non malesuada luctus. Mauris fermentum ullamcorper lobortis. Sed hendrerit felis in ullamcorper cursus. Curabitur fringilla malesuada elit, et lacinia lectus finibus sed. Sed suscipit sagittis turpis eu fermentum. Vivamus malesuada finibus ultricies. Curabitur et elit eget elit placerat semper et auctor sem. Sed semper ligula vitae malesuada finibus. Nam interdum nunc a magna elementum, sit amet finibus risus pulvinar. Suspendisse ut ex rutrum, eleifend mi et, tempus ligula. Nunc finibus, erat in eleifend fringilla, elit tortor lacinia ex, ut vulputate ipsum erat sit amet neque."
     },
     {
       "id": 6,
       "title": "Dividend Income Fund",
+      "interest": 7,
       "minimumValue": 10000,
       "maximumValue": 50000,
-      "investedValue": 20000,
-      "currentBalance": 18000,
-      "withdrawalDate": "2024-09-30"
+      "mandatoryPeriodMonths": 6,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non eros semper, aliquet enim at, tincidunt sem. Fusce fringilla mi arcu, sed congue metus maximus sit amet. Nullam iaculis a quam ut egestas. Nulla facilisi. Sed at efficitur metus. Nam commodo, orci nec viverra fermentum, nisi erat suscipit elit, ac lacinia nulla quam id tortor. Praesent tempus, sapien at dapibus finibus, neque nisl egestas turpis, vel porttitor ex mauris ac ligula. Aliquam ut erat ligula. Integer eu pellentesque sem. Morbi sit amet nibh purus. Proin luctus massa at tortor dapibus, sit amet gravida nibh gravida. Donec feugiat eros at scelerisque consequat."
     },
     {
       "id": 7,
       "title": "Global Bond Fund",
+      "interest": 5,
       "minimumValue": 5000,
       "maximumValue": 25000,
-      "investedValue": 15000,
-      "currentBalance": 14000,
-      "withdrawalDate": "2024-10-15"
+      "mandatoryPeriodMonths": 3,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra ligula nec quam consequat, eu lobortis massa finibus. Ut sit amet efficitur ex. Phasellus fermentum diam augue, nec sollicitudin mi tempus a. Mauris at ligula id mi laoreet porttitor. Curabitur consectetur efficitur fermentum. Suspendisse vestibulum, mauris nec luctus gravida, quam nibh porttitor ante, vitae aliquam est orci sed purus. Nulla pellentesque placerat nulla, ut suscipit mi commodo ut. Phasellus ut sem vel nulla suscipit ultricies. Mauris malesuada odio vitae lorem tristique, sed volutpat ligula fermentum. Cras porttitor auctor tellus vitae ultricies. In vulputate, lorem vitae hendrerit scelerisque, ex arcu vulputate leo, at aliquam arcu lorem nec quam. Ut venenatis lectus et lacinia cursus."
     },
     {
       "id": 8,
       "title": "Precious Metals Fund",
+      "interest": 8,
       "minimumValue": 20000,
       "maximumValue": 100000,
-      "investedValue": 50000,
-      "currentBalance": 48000,
-      "withdrawalDate": "2024-09-20"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id purus ut metus dapibus lobortis ut eu nulla. Praesent mollis consectetur justo, non volutpat lectus maximus sit amet. Duis laoreet dapibus vulputate. Aenean bibendum velit vel semper pharetra. Suspendisse non justo eu nulla tempus vehicula. Donec semper nisi et diam luctus, a tristique dui scelerisque. Donec finibus lorem in leo euismod rhoncus. Donec condimentum tellus in sagittis fermentum. Cras eu consequat neque. Vivamus et laoreet orci, ut mattis tortor."
     },
     {
       "id": 9,
       "title": "Global Emerging Markets Fund",
+      "interest": 10,
       "minimumValue": 50000,
       "maximumValue": 200000,
-      "investedValue": 100000,
-      "currentBalance": 90000,
-      "withdrawalDate": "2024-09-30"
+      "mandatoryPeriodMonths": 18,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id augue lorem. Praesent viverra, elit a aliquet vestibulum, ante erat ullamcorper velit, et rutrum urna risus vitae elit. Nullam vel tincidunt metus. Nunc vehicula felis nisl, in cursus risus fermentum sit amet. Mauris a malesuada lacus. In hac habitasse platea dictumst. Sed consequat orci ut ante aliquam, sed congue mauris convallis. Cras tristique elit urna, ut convallis arcu suscipit et. Donec sagittis condimentum bibendum. Aliquam ut lectus elit. Nullam efficitur elementum lectus, ac ullamcorper mi auctor id."
     },
     {
       "id": 10,
       "title": "Infrastructure Development Fund",
+      "interest": 9,
       "minimumValue": 10000,
       "maximumValue": 50000,
-      "investedValue": 30000,
-      "currentBalance": 28000,
-      "withdrawalDate": "2024-10-15"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis interdum neque ut gravida. Nulla ornare semper dui, et pellentesque neque semper eu. Praesent ac nibh vitae dui fermentum gravida. Quisque malesuada, sapien ac dapibus viverra, lorem justo finibus urna, non interdum libero magna id mi. Aliquam erat volutpat. Integer sit amet pellentesque ipsum. Nulla ut sapien sit amet tortor lobortis sagittis. Morbi eu turpis metus. Nunc finibus ultricies vestibulum. Sed euismod risus at nisl condimentum, id pulvinar tellus rhoncus. Fusce id vulputate turpis. Aliquam sagittis sagittis sapien sed pellentesque. Curabitur consequat ipsum ipsum, id consectetur urna luctus et. Etiam efficitur varius velit id sollicitudin. Sed ut efficitur ex."
     },
     {
       "id": 11,
       "title": "Sustainable Agriculture Fund",
+      "interest": 10,
       "minimumValue": 10000,
       "maximumValue": 50000,
-      "investedValue": 20000,
-      "currentBalance": 18000,
-      "withdrawalDate": "2024-11-30"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula dapibus diam id ultrices. Aenean imperdiet quam eget erat accumsan interdum. Duis at elit vel neque cursus eleifend. Duis gravida ipsum velit, ac malesuada sapien cursus non. Integer malesuada ante quis nulla ultrices, vel lacinia nulla vulputate. Nulla facilisi. Donec maximus ante in est commodo, vitae interdum orci pellentesque. Nullam quis tellus a purus gravida viverra. Maecenas lacinia lacus ac augue varius aliquam. Vestibulum a eleifend sem. Proin vitae urna tincidunt, sollicitudin justo in, viverra arcu. Cras elementum semper cursus. Nulla ultrices volutpat sem vel consequat."
     },
     {
       "id": 12,
       "title": "Infrastructure REIT Fund",
+      "interest": 8,
       "minimumValue": 5000,
       "maximumValue": 25000,
-      "investedValue": 15000,
-      "currentBalance": 14000,
-      "withdrawalDate": "2024-12-15"
+      "mandatoryPeriodMonths": 6,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada nulla id dui iaculis, vitae feugiat turpis commodo. Nullam eget bibendum est, vel hendrerit neque. Suspendisse tincidunt ultrices neque, sit amet maximus magna dignissim nec. Mauris faucibus auctor lorem, at dignissim risus. Curabitur eu ultrices nisl, eu scelerisque metus. Aenean at ultrices sapien, at bibendum nibh. Pellentesque rhoncus semper libero, ac dictum velit. Sed ut nisi elit. Sed nec orci et arcu finibus pharetra. Donec vestibulum auctor nulla, nec auctor lacus hendrerit in. Curabitur vel vehicula tellus, vitae auctor purus. Morbi vitae leo et leo malesuada interdum. Etiam consectetur felis orci, ac posuere enim lacinia vitae. Integer dapibus auctor urna, in semper nulla finibus in."
     },
     {
       "id": 13,
       "title": "Technology Innovation Fund",
+      "interest": 12,
       "minimumValue": 20000,
       "maximumValue": 100000,
-      "investedValue": 50000,
-      "currentBalance": 48000,
-      "withdrawalDate": "2024-11-20"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis, sapien vitae interdum posuere, quam mi rutrum massa, nec luctus enim ipsum id lacus. Maecenas cursus, lectus ut malesuada bibendum, lectus erat auctor nisi, sed varius nisi odio eget tortor. Praesent at tellus massa. Nunc varius purus sit amet facilisis semper. Suspendisse potenti. Morbi at ligula a risus ullamcorper facilisis eu non orci. Sed eu magna eget felis rutrum efficitur. Sed rutrum, erat in efficitur commodo, lectus metus facilisis tortor, at maximus velit tellus ut sem. Mauris tempor eleifend condimentum. Aenean suscipit finibus elit eu efficitur. Suspendisse gravida augue sed nibh vestibulum, ut vulputate ante lacinia. Quisque bibendum facilisis mi. Nulla pulvinar sagittis dapibus. Duis sollicitudin lectus nec erat convallis, eget luctus tortor rhoncus. Nulla tincidunt metus eu erat semper."
     },
     {
       "id": 14,
       "title": "Global HealthCare Fund",
+      "interest": 9,
       "minimumValue": 50000,
       "maximumValue": 200000,
-      "investedValue": 100000,
-      "currentBalance": 90000,
-      "withdrawalDate": "2024-11-30"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum iaculis cursus. Nam egestas pulvinar odio vel pharetra. Curabitur feugiat leo non commodo gravida. Sed eu diam odio. In et diam efficitur, rhoncus velit et, sollicitudin nibh. Nullam faucibus massa nec quam tincidunt ultrices. Sed ut leo eu elit varius vulputate vel sit amet quam. Nullam sed nibh vitae lacus vulputate tempus. Integer vel nunc in turpis dignissim lobortis in in velit. Nunc mollis consectetur magna, id iaculis est lacinia vitae. Maecenas gravida risus risus, id volutpat quam euismod ac. Sed euismod ipsum id pulvinar vestibulum. In hac habitasse platea dictumst. Maecenas dictum velit eget elit lobortis fringilla."
     },
     {
       "id": 15,
       "title": "Clean Energy Fund",
+      "interest": 11,
       "minimumValue": 10000,
       "maximumValue": 50000,
-      "investedValue": 30000,
-      "currentBalance": 28000,
-      "withdrawalDate": "2024-12-15"
+      "mandatoryPeriodMonths": 12,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat, enim a aliquam bibendum, dui lectus tincidunt quam, ac pellentesque dolor urna sit amet ipsum. Curabitur in efficitur dui, in commodo lacus. Nullam accumsan ex metus, a feugiat orci vehicula in. Praesent consequat mi lectus, et mattis tellus semper ac. Nulla euismod, orci sit amet euismod vulputate, ante dolor aliquam tellus, a lacinia tortor lorem nec turpis. Fusce efficitur ex metus, in scelerisque justo iaculis ut. Aliquam id eros sed arcu malesuada interdum. Morbi sed felis eu diam rutrum dapibus."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "photo": "https://example.com/johndoe.jpg",
+      "wallet": {
+        "currentBalance": 5000,
+        "totalInvestedBalance": 15000,
+        "investedFunds": [
+          {
+            "fundId": 1,
+            "investedValue": 25000,
+            "currentBalance": 22000,
+            "withdrawalDate": "2024-06-30"
+          },
+          {
+            "fundId": 3,
+            "investedValue": 50000,
+            "currentBalance": 40000,
+            "withdrawalDate": "2024-08-20"
+          },
+          {
+            "fundId": 5,
+            "investedValue": 30000,
+            "currentBalance": 28000,
+            "withdrawalDate": "2024-08-15"
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,0 +1,15 @@
+<h2>{{ selectedFund.title }}</h2>
+<p>{{ selectedFund.description }}</p>
+
+<ng-container *ngIf="!isInvested(selectedFund)">
+  <button (click)="investInFund()">Investir no Fundo</button>
+
+  <div *ngIf="showInvestmentForm">
+    <label>Valor do Investimento:</label>
+    <mat-slider [min]="selectedFund.minimumValue" [max]="selectedFund.maximumValue" step="1000" discrete
+      [displayWith]="formatLabel">
+      <input matSliderThumb [(ngModel)]="investmentAmount">
+    </mat-slider>
+    <button (click)="confirmInvestment()">Confirmar</button>
+  </div>
+</ng-container>
