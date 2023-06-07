@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
 
 import { FundsRoutingModule } from './funds-routing.module';
 
@@ -25,7 +26,9 @@ import { FundDetailsModalComponent } from './components/fund-details-modal/fund-
 
     MatDialogModule,
     MatIconModule,
-    MatSliderModule
+    MatInputModule,
+    MatSliderModule,
+    MatTableModule
   ]
 })
 export class FundsModule { }

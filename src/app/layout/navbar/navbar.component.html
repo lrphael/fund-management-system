@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+  <ng-container *ngIf="currentUser$ | async as currentUser">
+    <span>Welcome, {{ currentUser.name }}!</span>
+    <span class="spacer"></span>
+    <span>Current Balance: {{ currentUser.wallet.currentBalance }}</span>
+  </ng-container> 
+</mat-toolbar>
