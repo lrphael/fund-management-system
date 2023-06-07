@@ -143,26 +143,20 @@
       "email": "johndoe@example.com",
       "photo": "https://example.com/johndoe.jpg",
       "wallet": {
-        "currentBalance": 5000,
-        "totalInvestedBalance": 15000,
+        "currentBalance": 13000,
+        "totalInvestedBalance": 37000,
         "investedFunds": [
           {
             "fundId": 1,
-            "investedValue": 25000,
-            "currentBalance": 22000,
-            "withdrawalDate": "2024-06-30"
+            "investedValue": 26000,
+            "currentBalance": 26000,
+            "withdrawalDate": "2026-03-04"
           },
           {
-            "fundId": 3,
-            "investedValue": 50000,
-            "currentBalance": 40000,
-            "withdrawalDate": "2024-08-20"
-          },
-          {
-            "fundId": 5,
-            "investedValue": 30000,
-            "currentBalance": 28000,
-            "withdrawalDate": "2024-08-15"
+            "fundId": 6,
+            "investedValue": 11000,
+            "currentBalance": 11000,
+            "withdrawalDate": "2029-07-10"
           }
         ]
       }

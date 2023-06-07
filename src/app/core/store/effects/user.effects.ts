@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, mergeMap } from 'rxjs/operators';
+import { catchError, map, mergeMap, tap } from 'rxjs/operators';
 import { of, Observable } from 'rxjs';
 
 import { User } from 'src/app/data/models/user.model';
@@ -34,6 +34,19 @@ export class UserEffects {
     { dispatch: false } // Indica que não é necessário despachar uma nova ação após o efeito
   );
 
+
+  updateUser$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(UserActions.updateUser),
+      tap((action) => {
+        this.userService.updateUser(action.currentUser).subscribe(
+          () => console.log('User updated successfully.'),
+          (error) => console.log('Error updating user:', error)
+        );
+      })
+    ),
+    { dispatch: false }
+  );
 
   constructor(private actions$: Actions, private userService: UserService) { }
 }

@@ -97,9 +97,11 @@ export class FundDetailsModalComponent implements OnInit {
     if (this.investedFund) {
       const withdrawalAmount = this.investedFund.investedValue;
       const updatedInvestedFunds = this.currentUser.wallet.investedFunds.filter(fund => fund.fundId !== this.selectedFund.id);
+      const totalInvestment = updatedInvestedFunds.reduce((total, fund) => total + fund.investedValue, 0);
 
       this.currentUser = { ...this.currentUser, wallet: { ...this.currentUser.wallet, investedFunds: updatedInvestedFunds } };
       this.currentUser.wallet.currentBalance += withdrawalAmount;
+      this.currentUser.wallet.totalInvestedBalance = totalInvestment;
 
       this.store.dispatch(updateUser({ currentUser: this.currentUser }));
       this.close();
@@ -116,9 +118,11 @@ export class FundDetailsModalComponent implements OnInit {
       withdrawalDate: this._generateWithdrawalDate()
     };
     const updatedInvestedFunds = this.currentUser.wallet.investedFunds.concat(investedFund);
+    const totalInvestment = updatedInvestedFunds.reduce((total, fund) => total + fund.investedValue, 0);
 
     this.currentUser = { ...this.currentUser, wallet: { ...this.currentUser.wallet, investedFunds: updatedInvestedFunds } };
     this.currentUser.wallet.currentBalance -= investmentAmount;
+    this.currentUser.wallet.totalInvestedBalance = totalInvestment;
 
     this.store.dispatch(updateUser({ currentUser: this.currentUser }));
     this.close();
