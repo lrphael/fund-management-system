@@ -6,6 +6,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
 import { FundsRoutingModule } from './funds-routing.module';
@@ -28,6 +29,7 @@ import { FundDetailsModalComponent } from './components/fund-details-modal/fund-
     MatIconModule,
     MatInputModule,
     MatSliderModule,
+    MatSortModule,
     MatTableModule
   ]
 })

@@ -1,30 +1,50 @@
 <div class="search-container">
-  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title" />
+  <mat-form-field appearance="fill">
+    <input matInput [(ngModel)]="searchTerm" placeholder="Search by fund name" />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Interest</th>
-      <th>Minimum Value</th>
-      <th>Maximum Value</th>
-      <th>Mandatory Period (Months)</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let fund of searchFunds()">
-      <td>{{ fund.title }}</td>
-      <td>{{ fund.interest }}</td>
-      <td>{{ fund.minimumValue }}</td>
-      <td>{{ fund.maximumValue }}</td>
-      <td>{{ fund.mandatoryPeriodMonths }}</td>
-      <td>
-        <button mat-icon-button color="primary" (click)="openFundDetailsModal(fund)">
-          <mat-icon>info</mat-icon>
-        </button>
-      </td>
-    </tr>
-  </tbody>
+<table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)" class="mat-elevation-z8">
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="title">Name</th>
+    <td mat-cell *matCellDef="let fund">
+      <ng-container *ngIf="isFundInWallet(fund); else notInWallet">
+        <span class="bold-text">{{ fund.title }}</span>
+      </ng-container>
+      <ng-template #notInWallet>{{ fund.title }}</ng-template>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="interest">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="interest">Interest</th>
+    <td mat-cell *matCellDef="let fund">{{ fund.interest }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="minimumValue">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="minimumValue">Minimum Value</th>
+    <td mat-cell *matCellDef="let fund">{{ fund.minimumValue }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="maximumValue">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="maximumValue">Maximum Value</th>
+    <td mat-cell *matCellDef="let fund">{{ fund.maximumValue }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="mandatoryPeriodMonths">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="mandatoryPeriodMonths">Mandatory Period (Months)</th>
+    <td mat-cell *matCellDef="let fund">{{ fund.mandatoryPeriodMonths }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let fund">
+      <button mat-icon-button color="primary" (click)="openFundDetailsModal(fund)">
+        <mat-icon>info</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
 </table>

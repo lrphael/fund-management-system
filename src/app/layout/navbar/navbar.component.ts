@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
@@ -14,19 +14,10 @@ import { getCurrentUser } from '@state/selectors/user.selectors';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   currentUser$!: Observable<User | null>;
 
-  constructor(private store: Store<AppState>) { }
-
-  ngOnInit(): void {
-    this._loadUser();
+  constructor(private store: Store<AppState>) { 
+    this.currentUser$ = this.store.pipe(select(getCurrentUser));
   }
-
-  private _loadUser(): void {
-    this.currentUser$ = this.store.pipe(
-      select(getCurrentUser)
-    );
-  }
-
 }

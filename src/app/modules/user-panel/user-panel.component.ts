@@ -13,19 +13,10 @@ import { getCurrentUser } from '@state/selectors/user.selectors';
   templateUrl: './user-panel.component.html',
   styleUrls: ['./user-panel.component.scss']
 })
-export class UserPanelComponent implements OnInit {
+export class UserPanelComponent {
   currentUser$!: Observable<User | null>;
 
-  constructor(private store: Store<AppState>) { }
-
-  ngOnInit(): void {
-    this._loadUser();
+  constructor(private store: Store<AppState>) {
+    this.currentUser$ = this.store.pipe(select(getCurrentUser));
   }
-
-  private _loadUser(): void {
-    this.currentUser$ = this.store.pipe(
-      select(getCurrentUser)
-    );
-  }
-
 }
