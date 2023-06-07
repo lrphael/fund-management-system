@@ -1,15 +1,38 @@
-<h2>{{ selectedFund.title }}</h2>
-<p>{{ selectedFund.description }}</p>
+<ng-container *ngIf="selectedFund; else showLoading">
 
-<ng-container *ngIf="!isInvested(selectedFund)">
-  <button (click)="investInFund()">Investir no Fundo</button>
+  <h2>{{ selectedFund.title }}</h2>
+  <p>{{ selectedFund.description }}</p>
 
-  <div *ngIf="showInvestmentForm">
-    <label>Valor do Investimento:</label>
-    <mat-slider [min]="selectedFund.minimumValue" [max]="selectedFund.maximumValue" step="1000" discrete
-      [displayWith]="formatLabel">
-      <input matSliderThumb [(ngModel)]="investmentAmount">
-    </mat-slider>
-    <button (click)="confirmInvestment()">Confirmar</button>
+  <div *ngIf="investedFund">
+    <p>Invested Value: {{ investedFund.investedValue }}</p>
+    <p>Current Balance: {{ getBalance() }}</p>
+    <p>Withdrawal Date: {{ investedFund.withdrawalDate }}</p>
+    <p>Time Remaining to Withdrawal: {{ getRemainingTime() }}</p>
+    <button (click)="withdrawFromWallet()">Immediate Withdrawal</button>
   </div>
+
+  <div *ngIf="!investedFund && currentUser">
+    <button (click)="investInFund()" [disabled]="currentUser.wallet.currentBalance < selectedFund.minimumValue">
+      Invest in Fund
+    </button>
+
+    <div *ngIf="showInvestmentForm">
+      <label>Investment Amount:</label>
+      <mat-slider [min]="selectedFund.minimumValue" [max]="calculateMaxInvestmentAmount()" step="1000" discrete
+        [displayWith]="formatLabel">
+        <input matSliderThumb [(ngModel)]="investmentAmount">
+      </mat-slider>
+      <button (click)="confirmInvestment()">
+        Confirm
+      </button>
+    </div>
+
+    <div *ngIf="currentUser.wallet.currentBalance < selectedFund.minimumValue">
+      <p>You need to have at least {{ selectedFund.minimumValue }} to invest in this fund.</p>
+    </div>
+  </div>
+
 </ng-container>
+<ng-template #showLoading>
+  <p>Loading...</p>
+</ng-template>

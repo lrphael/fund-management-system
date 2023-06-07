@@ -9,5 +9,12 @@ export interface User {
 export interface Wallet {
   currentBalance: number;
   totalInvestedBalance: number;
-  investedFunds: number[];
+  investedFunds: InvestedFund[];
+}
+
+export interface InvestedFund {
+  fundId: number;
+  investedValue: number;
+  currentBalance: number;
+  withdrawalDate: string;
 }

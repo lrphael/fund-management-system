@@ -1,14 +1,14 @@
 import { createReducer, on } from '@ngrx/store';
-import { User } from 'src/app/data/models/user.model';
+import { User } from '@models/user.model';
 import * as UserActions from '../actions/user.actions';
 
 export interface UserState {
   currentUser: User | null;
   loading: boolean;
-  error: string | null;
+  error: any;
 }
 
-export const initialState: UserState = {
+const initialState: UserState = {
   currentUser: null,
   loading: false,
   error: null
@@ -16,15 +16,24 @@ export const initialState: UserState = {
 
 export const userReducer = createReducer(
   initialState,
-  on(UserActions.loadUser, (state) => ({ ...state, loading: true })),
+  on(UserActions.loadUser, state => ({
+    ...state,
+    loading: true,
+    error: null
+  })),
   on(UserActions.loadUserSuccess, (state, { currentUser }) => ({
     ...state,
     currentUser,
-    loading: false
+    loading: false,
+    error: null
   })),
   on(UserActions.loadUserFailure, (state, { error }) => ({
     ...state,
-    error,
-    loading: false
+    loading: false,
+    error
+  })),
+  on(UserActions.updateUser, (state, { currentUser }) => ({
+    ...state,
+    currentUser
   }))
 );
