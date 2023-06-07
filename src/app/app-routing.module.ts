@@ -3,10 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'funds',
-    loadChildren: () => import('./modules/funds/funds.module').then(m => m.FundsModule)
+    path: '',
+    redirectTo: 'panel',
+    pathMatch: 'full'
   },
-  { path: '', redirectTo: '/funds', pathMatch: 'full' }
+  {
+    path: 'panel',
+    loadChildren: () => import('@modules/user-panel/user-panel.module').then(m => m.UserPanelModule)
+  },
 ];
 
 @NgModule({

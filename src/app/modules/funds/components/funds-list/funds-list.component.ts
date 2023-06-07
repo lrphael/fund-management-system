@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { MatDialog } from '@angular/material/dialog';
 
-import { Fund } from 'src/app/data/models/fund.model';
-import { FundService } from 'src/app/data/services/fund.service';
+import { Fund } from '@models/fund.model';
+
+import { FundService } from '@services/fund.service';
 
 import { FundDetailsModalComponent } from '../fund-details-modal/fund-details-modal.component';
 
