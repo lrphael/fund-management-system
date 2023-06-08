@@ -117,6 +117,13 @@ export class FundsListComponent implements OnInit {
     });
   }
 
+  deleteFund(fund: Fund): void {
+    const confirmDelete = confirm('Are you sure you want to delete this fund?');
+    if (confirmDelete) {
+      this.fundService.deleteFund(fund.id).subscribe();
+    }
+  }
+
   editFund(fund: Fund): void {
     this.dialog.open(FundEditModalComponent, {
       width: '400px',
@@ -124,4 +131,9 @@ export class FundsListComponent implements OnInit {
     });
   }
 
+  openCreateFundModal(): void {
+    this.dialog.open(FundEditModalComponent, {
+      width: '400px'
+    });
+  }
 }

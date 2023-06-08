@@ -4,6 +4,9 @@
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
 </div>
+<div class="create-button">
+  <button mat-raised-button color="primary" (click)="openCreateFundModal()">Create Fund</button>
+</div>
 
 <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)" class="mat-elevation-z8">
   <ng-container matColumnDef="name">
@@ -39,6 +42,9 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let fund">
+      <button mat-icon-button color="warn" (click)="deleteFund(fund)">
+        <mat-icon>delete</mat-icon>
+      </button>
       <button mat-icon-button color="primary" (click)="editFund(fund)">
         <mat-icon>edit</mat-icon>
       </button>
