@@ -7,8 +7,7 @@ import { AppState } from './core/store/app.state';
 
 @Component({
   selector: 'app-root',
-  template: ` <app-navbar></app-navbar>
-  <router-outlet></router-outlet>`
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   currentUser$!: Observable<User | null>;
