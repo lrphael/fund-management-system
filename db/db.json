@@ -2,8 +2,8 @@
   "funds": [
     {
       "id": 1,
-      "title": "BlueChip Equity Fund",
-      "interest": 10,
+      "name": "BlueChip Equity Fund",
+      "interest": "13",
       "minimumValue": 10000,
       "maximumValue": 50000,
       "mandatoryPeriodMonths": 12,
@@ -11,7 +11,7 @@
     },
     {
       "id": 2,
-      "title": "GreenEnergy Renewable Fund",
+      "name": "GreenEnergy Renewable Fund",
       "interest": 8,
       "minimumValue": 5000,
       "maximumValue": 25000,
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "title": "TechGrowth Technology Fund",
+      "name": "TechGrowth Technology Fund",
       "interest": 12,
       "minimumValue": 20000,
       "maximumValue": 100000,
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "title": "RealEstate Investment Fund",
+      "name": "RealEstate Investment Fund",
       "interest": 9,
       "minimumValue": 50000,
       "maximumValue": 200000,
@@ -38,7 +38,7 @@
     },
     {
       "id": 5,
-      "title": "HealthCare Biotech Fund",
+      "name": "HealthCare Biotech Fund",
       "interest": 11,
       "minimumValue": 10000,
       "maximumValue": 50000,
@@ -47,7 +47,7 @@
     },
     {
       "id": 6,
-      "title": "Dividend Income Fund",
+      "name": "Dividend Income Fund",
       "interest": 7,
       "minimumValue": 10000,
       "maximumValue": 50000,
@@ -56,7 +56,7 @@
     },
     {
       "id": 7,
-      "title": "Global Bond Fund",
+      "name": "Global Bond Fund",
       "interest": 5,
       "minimumValue": 5000,
       "maximumValue": 25000,
@@ -65,7 +65,7 @@
     },
     {
       "id": 8,
-      "title": "Precious Metals Fund",
+      "name": "Precious Metals Fund",
       "interest": 8,
       "minimumValue": 20000,
       "maximumValue": 100000,
@@ -74,7 +74,7 @@
     },
     {
       "id": 9,
-      "title": "Global Emerging Markets Fund",
+      "name": "Global Emerging Markets Fund",
       "interest": 10,
       "minimumValue": 50000,
       "maximumValue": 200000,
@@ -83,7 +83,7 @@
     },
     {
       "id": 10,
-      "title": "Infrastructure Development Fund",
+      "name": "Infrastructure Development Fund",
       "interest": 9,
       "minimumValue": 10000,
       "maximumValue": 50000,
@@ -92,7 +92,7 @@
     },
     {
       "id": 11,
-      "title": "Sustainable Agriculture Fund",
+      "name": "Sustainable Agriculture Fund",
       "interest": 10,
       "minimumValue": 10000,
       "maximumValue": 50000,
@@ -101,7 +101,7 @@
     },
     {
       "id": 12,
-      "title": "Infrastructure REIT Fund",
+      "name": "Infrastructure REIT Fund",
       "interest": 8,
       "minimumValue": 5000,
       "maximumValue": 25000,
@@ -110,7 +110,7 @@
     },
     {
       "id": 13,
-      "title": "Technology Innovation Fund",
+      "name": "Technology Innovation Fund",
       "interest": 12,
       "minimumValue": 20000,
       "maximumValue": 100000,
@@ -119,7 +119,7 @@
     },
     {
       "id": 14,
-      "title": "Global HealthCare Fund",
+      "name": "Global HealthCare Fund",
       "interest": 9,
       "minimumValue": 50000,
       "maximumValue": 200000,
@@ -128,7 +128,7 @@
     },
     {
       "id": 15,
-      "title": "Clean Energy Fund",
+      "name": "Clean Energy Fund",
       "interest": 11,
       "minimumValue": 10000,
       "maximumValue": 50000,

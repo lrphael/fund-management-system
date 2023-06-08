@@ -13,6 +13,7 @@ import { getCurrentUser } from '@state/selectors/user.selectors';
 import { FundService } from '@services/fund.service';
 
 import { FundDetailsModalComponent } from '../fund-details-modal/fund-details-modal.component';
+import { FundEditModalComponent } from '../fund-edit-modal/fund-edit-modal.component';
 
 @Component({
   selector: 'app-funds-list',
@@ -25,7 +26,7 @@ export class FundsListComponent implements OnInit {
   currentUser$: Observable<User | null>;
 
   dataSource!: MatTableDataSource<Fund>;
-  columnsToDisplay: string[] = ['title', 'interest', 'minimumValue', 'maximumValue', 'mandatoryPeriodMonths', 'actions'];
+  columnsToDisplay: string[] = ['name', 'interest', 'minimumValue', 'maximumValue', 'mandatoryPeriodMonths', 'actions'];
 
   @ViewChild(MatSort) matSort!: MatSort;
 
@@ -64,7 +65,7 @@ export class FundsListComponent implements OnInit {
     }
 
     return this.funds.filter(fund =>
-      fund.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      fund.name.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
   }
 
@@ -100,8 +101,8 @@ export class FundsListComponent implements OnInit {
     this.funds = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'title':
-          return this._compare(a.title, b.title, isAsc);
+        case 'name':
+          return this._compare(a.name, b.name, isAsc);
         case 'interest':
           return this._compare(a.interest, b.interest, isAsc);
         case 'minimumValue':
@@ -115,4 +116,12 @@ export class FundsListComponent implements OnInit {
       }
     });
   }
+
+  editFund(fund: Fund): void {
+    this.dialog.open(FundEditModalComponent, {
+      width: '400px',
+      data: fund
+    });
+  }
+
 }

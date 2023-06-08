@@ -11,12 +11,14 @@ import { MatTableModule } from '@angular/material/table';
 
 import { FundsRoutingModule } from './funds-routing.module';
 
-import { FundsListComponent } from './components/funds-list/funds-list.component';
 import { FundDetailsModalComponent } from './components/fund-details-modal/fund-details-modal.component';
+import { FundEditModalComponent } from './components/fund-edit-modal/fund-edit-modal.component';
+import { FundsListComponent } from './components/funds-list/funds-list.component';
 
 @NgModule({
   declarations: [
     FundDetailsModalComponent,
+    FundEditModalComponent,
     FundsListComponent
   ],
   imports: [

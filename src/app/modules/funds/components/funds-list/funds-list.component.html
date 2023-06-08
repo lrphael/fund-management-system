@@ -6,13 +6,13 @@
 </div>
 
 <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)" class="mat-elevation-z8">
-  <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header="title">Name</th>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="name">Name</th>
     <td mat-cell *matCellDef="let fund">
       <ng-container *ngIf="isFundInWallet(fund); else notInWallet">
-        <span class="bold-text">{{ fund.title }}</span>
+        <span class="bold-text">{{ fund.name }}</span>
       </ng-container>
-      <ng-template #notInWallet>{{ fund.title }}</ng-template>
+      <ng-template #notInWallet>{{ fund.name }}</ng-template>
     </td>
   </ng-container>
 
@@ -39,6 +39,9 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let fund">
+      <button mat-icon-button color="primary" (click)="editFund(fund)">
+        <mat-icon>edit</mat-icon>
+      </button>
       <button mat-icon-button color="primary" (click)="openFundDetailsModal(fund)">
         <mat-icon>info</mat-icon>
       </button>

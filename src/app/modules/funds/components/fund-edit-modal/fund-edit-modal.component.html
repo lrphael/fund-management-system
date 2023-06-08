@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>{{ isEditMode ? 'Edit Fund' : 'Create Fund' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="fundForm" class="form-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter the fund name" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Interest</mat-label>
+      <input matInput formControlName="interest" placeholder="Enter the interest rate" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Minimum Value</mat-label>
+      <input matInput formControlName="minimumValue" placeholder="Enter the minimum value" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Maximum Value</mat-label>
+      <input matInput formControlName="maximumValue" placeholder="Enter the maximum value" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Mandatory Period (Months)</mat-label>
+      <input matInput formControlName="mandatoryPeriodMonths" placeholder="Enter the mandatory period" required>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" placeholder="Enter the fund description"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button color="primary" (click)="save()">{{ isEditMode ? 'Save Changes' : 'Create Fund' }}</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
