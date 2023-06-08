@@ -31,33 +31,30 @@ export class FundDetailsModalComponent implements OnInit {
   selectedFund: Fund;
   showInvestmentForm: boolean = false;
 
-
-
   constructor(
     public dialogRef: MatDialogRef<FundDetailsModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Fund,
     private store: Store<AppState>
   ) {
     this.selectedFund = data;
+    this.investmentAmount = data.minimumValue;
   }
 
   ngOnInit(): void {
-    this._loadUser();
+    this.loadUser();
   }
 
-  private _loadUser(): void {
-    this.currentUser$ = this.store.pipe(
-      select(getCurrentUser)
-    );
+  loadUser(): void {
+    this.currentUser$ = this.store.pipe(select(getCurrentUser));
     this.currentUser$.subscribe(user => {
       if (user) {
         this.currentUser = user;
-        this._findInvestedFund();
+        this.findInvestedFund();
       }
     });
   }
 
-  private _findInvestedFund(): void {
+  findInvestedFund(): void {
     this.investedFund = this.currentUser.wallet.investedFunds.find(fund => fund.fundId === this.selectedFund.id);
   }
 
@@ -82,7 +79,7 @@ export class FundDetailsModalComponent implements OnInit {
 
   getBalance(): number {
     if (this.investedFund) {
-      const balance = this.investedFund.investedValue + (this.investedFund.investedValue * this.selectedFund.interest);
+      const balance = this.investedFund.investedValue + (this.investedFund.investedValue * (this.selectedFund.interest / 100));
       return Math.round(balance);
     }
     return 0;
@@ -93,42 +90,45 @@ export class FundDetailsModalComponent implements OnInit {
   }
 
 
+  private _updateCurrentUsetState(typeOperation: 'withdrawal' | 'input', updatedInvestedFunds: InvestedFund[], amount: number, totalInvestment: number): void {
+    this.currentUser = { ...this.currentUser, wallet: { ...this.currentUser.wallet, investedFunds: updatedInvestedFunds } };
+    this.currentUser.wallet.currentBalance = typeOperation === 'withdrawal' ?
+      this.currentUser.wallet.currentBalance + amount : this.currentUser.wallet.currentBalance - amount;
+    this.currentUser.wallet.totalInvestedBalance = totalInvestment;
+    this.store.dispatch(updateUser({ currentUser: this.currentUser }));
+  }
+
   withdrawFromWallet(): void {
     if (this.investedFund) {
       const withdrawalAmount = this.investedFund.investedValue;
       const updatedInvestedFunds = this.currentUser.wallet.investedFunds.filter(fund => fund.fundId !== this.selectedFund.id);
       const totalInvestment = updatedInvestedFunds.reduce((total, fund) => total + fund.investedValue, 0);
 
-      this.currentUser = { ...this.currentUser, wallet: { ...this.currentUser.wallet, investedFunds: updatedInvestedFunds } };
-      this.currentUser.wallet.currentBalance += withdrawalAmount;
-      this.currentUser.wallet.totalInvestedBalance = totalInvestment;
+      this._updateCurrentUsetState('withdrawal', updatedInvestedFunds, withdrawalAmount, totalInvestment);
 
-      this.store.dispatch(updateUser({ currentUser: this.currentUser }));
       this.close();
     }
   }
 
-  confirmInvestment(): void {
-    const investmentAmount = this.investmentAmount;
-
-    const investedFund: InvestedFund = {
+  private _generateInvestedFundObject(): InvestedFund {
+    return {
       fundId: this.selectedFund.id,
-      investedValue: investmentAmount,
-      currentBalance: investmentAmount,
-      withdrawalDate: this._generateWithdrawalDate()
+      investedValue: this.investmentAmount,
+      currentBalance: this.investmentAmount,
+      withdrawalDate: this.generateWithdrawalDate()
     };
+  }
+
+  confirmInvestment(): void {
+    const investedFund = this._generateInvestedFundObject();
     const updatedInvestedFunds = this.currentUser.wallet.investedFunds.concat(investedFund);
     const totalInvestment = updatedInvestedFunds.reduce((total, fund) => total + fund.investedValue, 0);
 
-    this.currentUser = { ...this.currentUser, wallet: { ...this.currentUser.wallet, investedFunds: updatedInvestedFunds } };
-    this.currentUser.wallet.currentBalance -= investmentAmount;
-    this.currentUser.wallet.totalInvestedBalance = totalInvestment;
-
-    this.store.dispatch(updateUser({ currentUser: this.currentUser }));
+    this._updateCurrentUsetState('input', updatedInvestedFunds, this.investmentAmount, totalInvestment);
     this.close();
   }
 
-  private _generateWithdrawalDate(): string {
+  generateWithdrawalDate(): string {
     const currentDate = new Date();
     const randomYear = currentDate.getFullYear() + Math.floor(Math.random() * 4) + 3;
     const randomMonth = Math.floor(Math.random() * 12) + 1;
@@ -141,7 +141,6 @@ export class FundDetailsModalComponent implements OnInit {
   padNumber(number: number): string {
     return number.toString().padStart(2, '0');
   }
-
 
   close(): void {
     this.dialogRef.close();

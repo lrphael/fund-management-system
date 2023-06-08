@@ -1,38 +1,48 @@
-<ng-container *ngIf="selectedFund; else showLoading">
+<div *ngIf="selectedFund; else showLoading" class="modal-container">
+  <div class="modal-content">
+    <h2 class="fund-name">{{ selectedFund.name }}</h2>
+    <p>{{ selectedFund.description }}</p>
 
-  <h2>{{ selectedFund.name }}</h2>
-  <p>{{ selectedFund.description }}</p>
-
-  <div *ngIf="investedFund">
-    <p>Invested Value: {{ investedFund.investedValue }}</p>
-    <p>Current Balance: {{ getBalance() }}</p>
-    <p>Withdrawal Date: {{ investedFund.withdrawalDate }}</p>
-    <p>Time Remaining to Withdrawal: {{ getRemainingTime() }}</p>
-    <button (click)="withdrawFromWallet()">Immediate Withdrawal</button>
-  </div>
-
-  <div *ngIf="!investedFund && currentUser">
-    <button (click)="investInFund()" [disabled]="currentUser.wallet.currentBalance < selectedFund.minimumValue">
-      Invest in Fund
-    </button>
-
-    <div *ngIf="showInvestmentForm">
-      <label>Investment Amount:</label>
-      <mat-slider [min]="selectedFund.minimumValue" [max]="calculateMaxInvestmentAmount()" step="1000" discrete
-        [displayWith]="formatLabel">
-        <input matSliderThumb [(ngModel)]="investmentAmount">
-      </mat-slider>
-      <button (click)="confirmInvestment()">
-        Confirm
-      </button>
+    <div *ngIf="investedFund">
+      <p><span class="param-title">Invested Value:</span> {{ investedFund.investedValue }}</p>
+      <p><span class="param-title">Current Balance:</span> {{ getBalance() }}</p>
+      <p><span class="param-title">Withdrawal Date:</span> {{ investedFund.withdrawalDate }}</p>
+      <p><span class="param-title">Time Remaining to Withdrawal:</span> {{ getRemainingTime() }}</p>
+      <button mat-raised-button color="primary" (click)="withdrawFromWallet()">Immediate Withdrawal</button>
     </div>
 
-    <div *ngIf="currentUser.wallet.currentBalance < selectedFund.minimumValue">
-      <p>You need to have at least {{ selectedFund.minimumValue }} to invest in this fund.</p>
+    <div *ngIf="!investedFund && currentUser">
+      <div *ngIf="!showInvestmentForm">
+        <button mat-raised-button color="primary" (click)="investInFund()"
+          [disabled]="currentUser.wallet.currentBalance < selectedFund.minimumValue">
+          Invest in Fund
+        </button>
+      </div>
+
+      <div *ngIf="showInvestmentForm">
+        <div>
+          <span class="param-title">Investment Amount:</span>
+          <span> {{investmentAmount}} </span>
+        </div>
+        <div class="amount-row">
+          <mat-slider id="investmentAmount" [min]="selectedFund.minimumValue" [max]="calculateMaxInvestmentAmount()"
+            step="1000" discrete [displayWith]="formatLabel">
+            <input matSliderThumb [(value)]="investmentAmount">
+          </mat-slider>
+        </div>
+        <div class="button-row">
+          <button mat-raised-button color="warn" (click)="close()">Close</button>
+          <button mat-raised-button color="primary" (click)="confirmInvestment()">Confirm</button>
+        </div>
+      </div>
+
+      <div *ngIf="currentUser.wallet.currentBalance < selectedFund.minimumValue">
+        <p>You need to have at least {{ selectedFund.minimumValue }} to invest in this fund.</p>
+      </div>
     </div>
   </div>
+</div>
 
-</ng-container>
 <ng-template #showLoading>
   <p>Loading...</p>
 </ng-template>
