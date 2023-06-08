@@ -10,7 +10,7 @@ import { User } from '../models/user.model';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/users/1'; // URL da API para buscar o usuário
+  private apiUrl = 'http://localhost:3000/users/1';
 
   constructor(private http: HttpClient) { }
 

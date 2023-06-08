@@ -31,7 +31,7 @@ export class UserEffects {
         console.log('loadUserSuccess action:', action);
       })
     ),
-    { dispatch: false } // Indica que não é necessário despachar uma nova ação após o efeito
+    { dispatch: false }
   );
 
 

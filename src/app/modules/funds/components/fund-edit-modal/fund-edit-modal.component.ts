@@ -81,9 +81,6 @@ export class FundEditModalComponent implements OnInit {
       return;
     }
     this._createFundRequest().subscribe((data) => {
-      console.log(data)
-      debugger
-      // Handle success
       this.dialogRef.close();
     });
   }
