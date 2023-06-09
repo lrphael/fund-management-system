@@ -8,7 +8,6 @@ import { User } from '@models/user.model';
 import { AppState } from '@core/store/app.state';
 import { getCurrentUser } from '@state/selectors/user.selectors';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',

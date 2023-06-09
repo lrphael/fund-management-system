@@ -33,7 +33,7 @@ export class FundService {
   getFundMaxId(): Observable<number> {
     return this.getAllFunds().pipe(
       map(existingFunds => {
-        const maxId = existingFunds.reduce((max, f) => (f.id > max ? f.id : max), 0);
+        const maxId = existingFunds.reduce((max, f) => (f.id! > max ? f.id! : max), 0);
         return maxId;
       })
     );

@@ -10,7 +10,6 @@ import { AppState } from './core/store/app.state';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  currentUser$!: Observable<User | null>;
 
   constructor(private store: Store<AppState>) { }
 

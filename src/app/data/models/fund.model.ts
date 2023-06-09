@@ -1,5 +1,5 @@
 export interface Fund {
-  id: number;
+  id?: number;
   name: string;
   interest: number;
   minimumValue: number;

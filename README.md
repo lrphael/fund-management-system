@@ -12,7 +12,7 @@ Follow these steps to install the project:
 
 ## Usage
 
-1. To start the jsonServer, run the following command:: `npm run start:server`. The api will be accessible at `http://localhost:3000`. 
+1. To start the jsonServer, run the following command: `npm run start:server`. The api will be accessible at `http://localhost:3000`. 
 2. To start the application, run the following command: `ng serve`. The application will be accessible at `http://localhost:4200`. 
 
 ## Features
@@ -33,3 +33,4 @@ Follow these steps to install the project:
 - RxJS
 - Ngrx (for state management)
 - JSON Server (for mock API) 
+- Jarmine/Karma to unit test

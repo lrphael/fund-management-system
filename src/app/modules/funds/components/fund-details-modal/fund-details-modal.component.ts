@@ -112,7 +112,7 @@ export class FundDetailsModalComponent implements OnInit {
 
   private _generateInvestedFundObject(): InvestedFund {
     return {
-      fundId: this.selectedFund.id,
+      fundId: this.selectedFund.id || 0,
       investedValue: this.investmentAmount,
       currentBalance: this.investmentAmount,
       withdrawalDate: this.generateWithdrawalDate()

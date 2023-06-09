@@ -81,7 +81,7 @@ export class FundsListComponent implements OnInit {
     this.currentUser$.subscribe(user => {
       if (user) {
         const fundIds = user.wallet.investedFunds.map(investedFund => investedFund.fundId);
-        isInWallet = fundIds.includes(fund.id);
+        isInWallet = fundIds.includes(fund.id!);
       }
     });
     return isInWallet;
@@ -120,7 +120,7 @@ export class FundsListComponent implements OnInit {
   deleteFund(fund: Fund): void {
     const confirmDelete = confirm('Are you sure you want to delete this fund?');
     if (confirmDelete) {
-      this.fundService.deleteFund(fund.id).subscribe();
+      this.fundService.deleteFund(fund.id!).subscribe();
     }
   }
 
