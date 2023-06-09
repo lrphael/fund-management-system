@@ -22,7 +22,10 @@ class FundServiceMock {
     return of(fund);
   }
 }
-
+/**
+ * The purpose of this test is to ensure the correct behavior of the component
+ * in different scenarios, such as initialization, form editing, and fund request creation.
+ */
 describe('FundEditModalComponent', () => {
   let component: FundEditModalComponent;
   let fixture: ComponentFixture<FundEditModalComponent>;
@@ -113,15 +116,15 @@ describe('FundEditModalComponent', () => {
       maximumValue: ['', Validators.required],
       mandatoryPeriodMonths: ['', Validators.required],
       description: ['']
-    }); 
+    });
     component.fundForm = formValues;
     setTimeout(() => {
       component.fundForm.patchValue(formValues);
       spyOn(fundService, 'getFundMaxId').and.returnValue(of(10));
       spyOn(fundService, 'createFund').and.returnValue(of(mockData));
-  
+
       component.save();
-  
+
       expect(fundService.getFundMaxId).toHaveBeenCalled();
       expect(fundService.createFund).toHaveBeenCalledWith(component['_createFundObject']());
       expect(dialogRef.close).toHaveBeenCalled();
@@ -137,14 +140,14 @@ describe('FundEditModalComponent', () => {
       maximumValue: ['', Validators.required],
       mandatoryPeriodMonths: ['', Validators.required],
       description: ['']
-    });  
+    });
     setTimeout(() => {
       component.fundForm.patchValue(formValues);
       spyOn(fundService, 'getFundMaxId').and.returnValue(of(10));
       spyOn(fundService, 'createFund').and.returnValue(of(mockData));
-  
+
       component.save();
-  
+
       expect(fundService.getFundMaxId).toHaveBeenCalled();
       expect(fundService.createFund).toHaveBeenCalledWith(component['_createFundObject']());
       expect(dialogRef.close).toHaveBeenCalled();

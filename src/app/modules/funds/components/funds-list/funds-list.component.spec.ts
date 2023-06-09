@@ -21,6 +21,12 @@ import { FundsListComponent } from './funds-list.component';
 import { FundDetailsModalComponent } from '../fund-details-modal/fund-details-modal.component';
 import { FundEditModalComponent } from '../fund-edit-modal/fund-edit-modal.component';
 
+/**
+ * The purpose of this test is to ensure the correct behavior of the component
+ * in different scenarios, such as initializing the data source, filtering funds,
+ * opening fund details modal, checking fund presence in wallet, sorting data,
+ * deleting funds, and opening fund edit/create modals.
+ */
 describe('FundsListComponent', () => {
   let component: FundsListComponent;
   let fixture: ComponentFixture<FundsListComponent>;

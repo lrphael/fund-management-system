@@ -40,7 +40,11 @@ class StoreMock {
     return of(mockUser);
   }
 }
-
+/** 
+ * The purpose of this test is to ensure the correct behavior of the component
+ * in different scenarios, such as calculating investment amounts, checking fund presence in wallet,
+ * getting remaining time, and confirming investments.
+ */
 describe('FundDetailsModalComponent', () => {
   let component: FundDetailsModalComponent;
   let fixture: ComponentFixture<FundDetailsModalComponent>;

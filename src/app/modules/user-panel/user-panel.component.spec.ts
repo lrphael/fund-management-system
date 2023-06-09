@@ -24,6 +24,10 @@ const mockUser: User = {
   }
 };
 
+/**
+ * The purpose of this test is to ensure the correct behavior of the component
+ * in different scenarios, such as creating the component and setting the currentUser$ value from the store.
+ */
 describe('UserPanelComponent', () => {
   let component: UserPanelComponent;
   let fixture: ComponentFixture<UserPanelComponent>;
